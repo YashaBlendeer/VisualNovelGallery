@@ -16,10 +16,9 @@ A visual novel directory where people can add their novels and share them with e
 
 - Like, comment and adding novels to the "Watch later" list
 
-
 May be expanded.
 
-## Tech Stack
+## Tech  Stack
 
 **Client:** React, Bootstrap, SCSS, JS, HTML
 
