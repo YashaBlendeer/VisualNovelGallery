@@ -1,28 +1,29 @@
 # Visual Novel Gallery 
 
-A visual novel directory where people can add their novels to your browser for everyone, as well as rate other people's novels.
+A visual novel directory where people can add their novels and share them with everyone, as well as rate other people's novels.
 
 ## Features
 
-- Implementing a scene editor for a visual novel
+- A scene editor for a visual novel
 
 - Scrolling through the scenes of the novel in the browser itself
 
-- Publication of the novels themselves
+- Publication of the novels
 
-- Sorting novels by a large number of likes or comments
+- List of the novels
 
-- Like, comment, add to the "Watch later" list
+- Sorting novels by likes or comments
 
-- List of novellas
+- Like, comment and adding novels to the "Watch later" list
+
 
 May be expanded.
 
 ## Tech Stack
 
-**Client:** React,  Bootstrap, SCSS
+**Client:** React, Bootstrap, SCSS, JS, HTML
 
-**Server:** ECMAScript, (TypeScript?), Node, Express, MongoDB
+**Server:** Node.JS, Express, MongoDB
 
 May be expanded.
 
