@@ -23,7 +23,7 @@ May be expanded.
 
 **Client:** React, Bootstrap, SCSS, JS, HTML
 
-**Server:** Node.JS, Express, MongoDB
+**Server:** Node.JS, Express, MongoDB, ECMAScript
 
 May be expanded.
 
