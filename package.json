@@ -31,14 +31,14 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
+      "git add",
       "prettier --write",
       "node_modules/.bin/eslint --max-warnings=0",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"      
     ],
     "*.{html,css,sass,scss,less}": [
-      "prettier --write",
-      "git add"
+      "git add",
+      "prettier --write"
     ]
   }
 }
