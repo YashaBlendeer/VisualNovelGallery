@@ -33,6 +33,7 @@
     "*.{js,jsx}": [
       "git add",
       "prettier --write",
+      "node_modules/.bin/eslint --max-warnings=0",
       "eslint --fix"      
     ],
     "*.{html,css,sass,scss,less}": [
