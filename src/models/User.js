@@ -24,6 +24,7 @@ const UserSchema = new Schema(
       required: true
     }
   },
+  { timestamps: true }
 );
 
 module.exports = model("users", UserSchema);
