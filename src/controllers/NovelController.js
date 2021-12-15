@@ -12,3 +12,70 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var NovelController = function () {
+    function NovelController() {
+        _classCallCheck(this, NovelController);
+    }
+
+    _createClass(NovelController, [{
+        key: 'index',
+        value: function index(req, res) {
+            _Novel2.default.find().then(function (err, novels) {
+                if (err) {
+                    res.send(err);
+                }
+                res.json(novels);
+            });
+        }
+    }, {
+        key: 'create',
+        value: function create(req, res) {
+            var data = req.body;
+            var novel = new _Novel2.default({
+                _id: data._id,
+                title: data.title,
+                pages: data.pages });
+            novel.save().then(function () {
+                res.send({ status: 'ok' });
+            });
+        }
+    }, {
+        key: 'read',
+        value: function read(req, res) {
+            _Novel2.default.findOne({ _id: req.params.id }).then(function (novel) {
+                if (!novel) {
+                    res.send({ error: 'not found' });
+                } else {
+                    res.json(novel);
+                }
+            });
+        }
+    }, {
+        key: 'update',
+        value: function update(req, res) {
+            _Novel2.default.findByIdAndUpdate(req.params.id, { $set: req.body }, function (err) {
+                if (err) {
+                    res.send(err);
+                }
+                res.json({ status: 'updated' });
+            });
+        }
+    }, {
+        key: 'delete',
+        value: function _delete(req, res) {
+            _Novel2.default.findByIdAndDelete({
+                _id: req.params.id
+            }).then(function (novel) {
+                if (novel) {
+                    res.json({ status: 'deleted' });
+                } else {
+                    res.json({ status: 'error' });
+                }
+            });
+        }
+    }]);
+
+    return NovelController;
+}();
+
+exports.default = NovelController;
