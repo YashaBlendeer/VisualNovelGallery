@@ -1,6 +1,6 @@
 # Visual Novel Gallery 
 
- A visual novel directory where people can add their novels and share them with everyone, as well as rate other people's novels.
+	A visual novel directory where people can add their novels and share them with everyone, as well as rate other people's novels.
 
 ## Features
 
@@ -24,4 +24,4 @@ May be expanded.
 
 **Server:** Node.JS, Express, MongoDB, ECMAScript
 
-May be expanded.
+	May be expanded.
