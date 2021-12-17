@@ -1,27 +1,34 @@
-Object.defineProperty(exports, "__esModule", {
-    value: true
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true,
 });
 
-var _mongoose = require('mongoose');
+const _mongoose = require('mongoose');
 
-var _mongoose2 = _interopRequireDefault(_mongoose);
+const _mongoose2 = _interopRequireDefault(_mongoose);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
-var PagesSchema = new _mongoose.Schema({
+const PagesSchema = new _mongoose.Schema(
+  {
     bg: String,
     img: String,
     name: String,
     msg: String,
-    pos: Number
-}, {
-    timestamps: true
+    pos: Number,
+  },
+  {
+    timestamps: true,
+  }
+);
+const NovelSchema = new _mongoose.Schema({
+  _id: Number,
+  title: String,
+  pages: [PagesSchema],
 });
-var NovelSchema = new _mongoose.Schema({
-    _id: Number,
-    title: String,
-    pages: [PagesSchema]
-});
-var Novel = _mongoose2.default.model('Novel', NovelSchema);
+const Novel = _mongoose2.default.model('Novel', NovelSchema);
 
 exports.default = Novel;

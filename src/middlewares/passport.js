@@ -1,10 +1,12 @@
-const User = require("../models/User");
-const { SECRET } = require("../config");
-const { Strategy, ExtractJwt } = require("passport-jwt");
+'use strict';
+
+const User = require('../models/User');
+const { SECRET } = require('../config');
+const { Strategy, ExtractJwt } = require('passport-jwt');
 
 const opts = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-  secretOrKey: SECRET
+  secretOrKey: SECRET,
 };
 
 module.exports = passport => {
@@ -17,9 +19,7 @@ module.exports = passport => {
           }
           return done(null, false);
         })
-        .catch(err => {
-          return done(null, false);
-        });
+        .catch(() => done(null, false));
     })
   );
 };

@@ -1,30 +1,32 @@
-const { Schema, model } = require("mongoose");
+'use strict';
+
+const { Schema, model } = require('mongoose');
 
 const UserSchema = new Schema(
   {
     name: {
       type: String,
-      required: true
+      required: true,
     },
     email: {
       type: String,
-      required: true
+      required: true,
     },
     role: {
       type: String,
-      default: "user",
-      enum: ["user", "admin"]
+      default: 'user',
+      enum: ['user', 'admin'],
     },
     username: {
       type: String,
-      required: true
+      required: true,
     },
     password: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   { timestamps: true }
 );
 
-module.exports = model("users", UserSchema);
+module.exports = model('users', UserSchema);

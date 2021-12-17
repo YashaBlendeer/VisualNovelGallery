@@ -14,7 +14,9 @@
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
     "prepush": "lint-staged",
-    "eslint": "node_modules/.bin/eslint src/"
+    "eslint": "node_modules/.bin/eslint src/",
+    "lint": "eslint \"**/*.js\"",
+    "fix": "eslint --fix \"**/*.js\""
   },
   "devDependencies": {
     "eslint-config-prettier": "^2.9.0",
