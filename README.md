@@ -3,20 +3,39 @@
 	
 A quizes visual novel directory where people can take quiz novel and earn points for completing quizs.
 
+## Available Roles
+
+- User
+
+- Admin
 
 ## Features
 
-- Add / remove / edit questions on the novel, catalog, points from the admin
+- Registration
 
-- Passing the questions themselves
+- Authorization
 
-- User registration
+- Change password
 
-- List of catalogs
+## Features for Admin
 
-- List of users with high points
+- Add / remove / edit questions on the novel, catalog, points
 
-May be expanded.
+- Add / delete / update users
+
+- See information about users
+
+- List catalogs
+
+- List users with high points
+
+## Features for User
+
+- Choose the category of testing
+
+- Pass the questions
+
+- See points
 
 ## Tech  Stack
 
