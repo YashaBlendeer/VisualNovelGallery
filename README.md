@@ -15,7 +15,7 @@ A quizes visual novel directory where people can take quiz novel and earn points
 
 - Authorization
 
-- Change password
+- Password changing 
 
 ## Features for Admin
 
