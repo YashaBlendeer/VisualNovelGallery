@@ -1,38 +1,31 @@
-'use strict';
-
-const router = require('express').Router();
-// Bring in the User Registration function
+const express = require('express')
 const {
-  userAuth,
-  userLogin,
-  //checkRole,
-  userRegister,
-  serializeUser,
-} = require('../utils/Auth');
+  getUsers,
+  getUser,
+  createUser,
+  updateUser,
+  deleteUser
+} = require('../controllers/users')
 
-// Users Registeration Route
-router.post('/register-user', async (req, res) => {
-  await userRegister(req.body, 'user', res);
-});
+const User = require('../models/User')
 
-// Admin Registration Route
-router.post('/register-admin', async (req, res) => {
-  await userRegister(req.body, 'admin', res);
-});
+const router = express.Router({ mergeParams: true })
 
-// Users Login Route
-router.post('/login-user', async (req, res) => {
-  await userLogin(req.body, 'user', res);
-});
+const advancedResults = require('../middleware/advancedResults')
+const { protect, authorize } = require('../middleware/auth')
 
-// Admin Login Route
-router.post('/login-admin', async (req, res) => {
-  await userLogin(req.body, 'admin', res);
-});
+router.use(protect)
+router.use(authorize('admin'))
 
-// Profile Route
-router.get('/profile', userAuth, async (req, res) =>
-  res.json(serializeUser(req.user))
-);
+router
+  .route('/')
+  .get(advancedResults(User), getUsers)
+  .post(createUser)
 
-module.exports = router;
+router
+  .route('/:id')
+  .get(getUser)
+  .put(updateUser)
+  .delete(deleteUser)
+
+module.exports = router
