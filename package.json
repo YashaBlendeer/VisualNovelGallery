@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint": "^8.5.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
@@ -22,13 +23,14 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.2",
     "husky": "^0.14.3",
+    "lint-prepush": "^2.2.0",
     "lint-staged": "^11.2.3",
     "prettier": "^1.14.0"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run test"
+      "pre-push": "lint-prepush"
     }
   },
   "lint-staged": {
@@ -42,5 +44,13 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "lint-prepush": {
+    "base": "master",
+    "tasks": {
+      "**/*.{js,jsx}": [
+        "eslint"
+      ]
+    }
   }
 }

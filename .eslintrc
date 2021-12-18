@@ -21,7 +21,7 @@
     ],
     "linebreak-style": [
       "error",
-      "unix"
+      "windows"
     ],
     "quotes": [
       "error",
@@ -224,12 +224,6 @@
     ],
     "arrow-spacing": [
       "error"
-    ],
-    "no-confusing-arrow": [
-      "error",
-      {
-        "allowParens": true
-      }
     ],
     "no-useless-computed-key": [
       "error"
