@@ -51,4 +51,10 @@ build/
 
 # Portable Network Graphics
 *.png
+package-lock.json
+.env
+public/uploads/
+_data/users-prod.json
+.vscode
+
 
