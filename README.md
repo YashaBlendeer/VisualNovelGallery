@@ -1,28 +1,28 @@
-# Visual Novel Gallery 
+# Visual Novel Tests
 
-	A visual novel directory where people can add their novels and share them with everyone, as well as rate other people's novels.
+	
+A quizes visual novel directory where people can take quiz novel and earn points for completing quizs.
+
 
 ## Features
 
-- A scene editor for a visual novel
+- Add / remove / edit questions on the novel, catalog, points from the admin
 
-- Scrolling through the scenes of the novel in the browser itself
+- Passing the questions themselves
 
-- Publication of the novels
+- User registration
 
-- List of the novels
+- List of catalogs
 
-- Sorting novels by likes or comments
-
-- Like, comment and adding novels to the "Watch later" list
+- List of users with high points
 
 May be expanded.
 
 ## Tech  Stack
 
-**Client:** React, Bootstrap, SCSS, JS, HTML
+**Client:** JS
 
-**Server:** Node.JS, Express, MongoDB, ECMAScript
+**Server:** Node.JS, Express, MongoDB
 
 	May be expanded.
 
