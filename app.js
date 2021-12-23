@@ -19,7 +19,6 @@ const DBConnection = require('./config/db');
 dotenv.config({ path: './config/.env' });
 
 DBConnection();
-
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 const categoriesRoutes = require('./routes/categories');
